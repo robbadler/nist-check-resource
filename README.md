@@ -15,9 +15,9 @@ resource_types:
 - `feed`: (required) A tag (year, 'recent' or 'modified') to query fron the NIST JSON feeds.
 
 ## `check`: Emits updated SHA256 of the requested feed
- 
+
 ## `in`: Emits the SHA256 as a file named `${feed}.sha256`
- 
+
 ## `out`: This resource can not produce a `put`
 ## Examples ##
 Trigger a Docker image build from this resource
