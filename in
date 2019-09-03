@@ -38,3 +38,5 @@ jq --arg SHA ${SHA} -n '
   "metadata": []
 }
 ' > "${DESTINATION}/${FEED}.sha256"
+cat "${DESTINATION}/${FEED}.sha256"
+
