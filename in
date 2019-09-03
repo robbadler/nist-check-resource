@@ -32,4 +32,8 @@ CONTENT=$(curl --silent -L ${URL} | tr -dc '[:print:]\n' | grep 'sha256:')
 
 SHA=${CONTENT:7}
 
-echo "{\"sha256\": \"${SHA}\"}" > "${DESTINATION}/${feed}.sha256"
+jq -n '
+{
+  "sha256": "${SHA}"
+}
+' > "${DESTINATION}/${FEED}.sha256"
